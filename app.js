@@ -3,7 +3,7 @@ const enderecoUsurio = {
     bairro: document.querySelector('#bairro'),
     cidade: document.querySelector('#cidade'),
     uf: document.querySelector('#uf'),
-    estado2: document.querySelector('#estado2'),
+    estado: document.querySelector('#estado'),
     regiao: document.querySelector('#regiao'),
     cep: "06361150"
 }
@@ -17,18 +17,22 @@ const dadosCep = {
     bairro:resposta.bairro,
     cidade: resposta.localidade,
     uf:resposta.uf,
-    estado2:resposta.estado,
+    estado:resposta.estado,
     regiao:resposta.regiao,
   }
+inserirDados(dadosCep)
 
-  enderecoUsurio.rua.innerText = dadosCep.rua
-  enderecoUsurio.bairro.innerText = dadosCep.bairro
-  enderecoUsurio.cidade.innerText = dadosCep.cidade
-  enderecoUsurio.uf.innerText = dadosCep.uf
-  enderecoUsurio.estado2.innerText = dadosCep.estado2
-  enderecoUsurio.regiao.innerText = dadosCep.regiao
 
-  console.log(dadosCep);
-  //   return resposta
+ 
 }
-consultaCep(enderecoUsurio.cep);
+consultaCep(enderecoUsurio.cep)
+//para ativar a 
+// Função para inserir os dados do cep na tela
+function inserirDados(dadosCep){    
+enderecoUsurio.rua.innerText = dadosCep.rua
+enderecoUsurio.bairro.innerText = dadosCep.bairro
+enderecoUsurio.cidade.innerText = dadosCep.cidade
+enderecoUsurio.uf.innerText = dadosCep.uf
+enderecoUsurio.estado.innerText = dadosCep.estado
+enderecoUsurio.regiao.innerText = dadosCep.regiao
+}
